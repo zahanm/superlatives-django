@@ -18,6 +18,6 @@ class Resident(models.Model):
   name = models.CharField(max_length=200)
   gender = models.CharField(max_length=1, choices=GENDER)
   year = models.CharField(max_length=1, choices=YEAR)
-  staff = models.BooleanField()
+  staff = models.BooleanField() # Default false
 
 
