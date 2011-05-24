@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}{% endblock %}</title>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/jquery.js"></script>
+    {% block headincludes %}{% endblock %}
 </head>
 <body>
   <div id="body">

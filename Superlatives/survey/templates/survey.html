@@ -2,6 +2,10 @@
 
 {% block title %}Cardenal Survey{% endblock %}
 
+{% block headincludes %}
+<script type="text/javascript" src="/surveyjs"></script>
+{% endblock %}
+
 {% block content %}
 {% for question in questions %}
   <h2>{{ question.qtext }}</h2>
