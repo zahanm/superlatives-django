@@ -25,5 +25,5 @@ class Question(models.Model):
 
 class Answer(models.Model):
   question = models.ForeignKey(Question)
-  answer = models.ForiegnKey(Resident) # related_name = 'answer_set'
+  answer = models.ForeignKey(Resident) # related_name = 'answer_set'
 

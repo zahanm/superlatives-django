@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Cardenal Survey{% endblock %}
+
+{% block content %}
+{% for question in questions %}
+  <h2>{{ question.qtext }}</h2>
+{% endfor %}
+{% endblock %}
+
