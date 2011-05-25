@@ -1,13 +1,18 @@
-from django.conf.urls.defaults import *
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.conf.urls.defaults import *
+from django.contrib import admin
+
+import survey.views
+
+import os
+
+admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r"/", survey.views.show_survey),
-    (r"/surveyjs", survey.views.surveyjs),
-    
+    (r"^$", survey.views.show_survey),
+    (r"^surveyjs$", survey.views.surveyjs),
+    (r'^admin/', include(admin.site.urls)),
+
     # Example:
     # (r'^Superlatives/', include('Superlatives.foo.urls')),
 
@@ -21,6 +26,6 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('django.views.static', 
   (r'^static/(?P<path>.*)$', 'serve', {
-    'document_root': os.path.join(os.path.dirname(os.path.absname(__file__)), 'static') }),
+    'document_root': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static') }),
 )
 

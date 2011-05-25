@@ -1,7 +1,7 @@
 
 var residents = [
 {% for resident in residents %}
- ' {{ resident.name }}',
+ '{{ resident.name }}',
 {% endfor %}
 ];
 

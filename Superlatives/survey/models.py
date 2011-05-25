@@ -1,3 +1,5 @@
+
+from django.contrib import admin
 from django.db import models
 
 # Create your models here.
@@ -26,4 +28,8 @@ class Question(models.Model):
 class Answer(models.Model):
   question = models.ForeignKey(Question)
   answer = models.ForeignKey(Resident) # related_name = 'answer_set'
+
+admin.site.register(Resident)
+admin.site.register(Question)
+admin.site.register(Answer)
 
