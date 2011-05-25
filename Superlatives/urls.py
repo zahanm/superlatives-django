@@ -9,7 +9,8 @@ import os
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r"^$", survey.views.show_survey),
+    (r"^$", survey.views.survey),
+    (r"^survey/". survey.views.survey),
     (r"^surveyjs$", survey.views.surveyjs),
     (r'^admin/', include(admin.site.urls)),
 

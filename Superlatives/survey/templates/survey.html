@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block title %}Cardenal Survey{% endblock %}
@@ -7,8 +8,19 @@
 {% endblock %}
 
 {% block content %}
+
 {% for question in questions %}
-  <h2>{{ question.qtext }}</h2>
+<form action='/survey/' method='post'>
+  {% csrf_token %}
+  <input type="hidden" name="qid" value="{{ question.id }}" />
+  <div class="fieldWrapper">
+    <label for="id_{{question.id}}">{{ question }}</label>
+    <p><input type="text" class="inp_resident" id="id_{{ question.id }}"
+    name="resident" /></p>
+  </div>
+  <p><input type="submit" class="button" value="Respond" /></p>
+</form>
 {% endfor %}
+
 {% endblock %}
 
