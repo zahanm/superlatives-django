@@ -1,4 +1,4 @@
-# Django settings for Superlatives project.
+# Django settings for superlatives project.
 
 import os
 
@@ -66,7 +66,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'Superlatives.urls'
+ROOT_URLCONF = 'superlatives.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
