@@ -22,6 +22,9 @@ class Resident(models.Model):
   year = models.CharField(max_length=1, choices=YEAR)
   staff = models.BooleanField(default=False)
 
+  def __unicode__(self):
+    return self.name
+
 class Question(models.Model):
   qtext = models.CharField(max_length=200, unique=True)
 
@@ -33,7 +36,7 @@ class Answer(models.Model):
   resident = models.ForeignKey(Resident) # related_name = 'answer_set'
 
   def __unicode__(self):
-    return self.question.qtext + ": " + self.resident.name
+    return str(self.question) + ": " + str(self.resident)
 
 admin.site.register(Resident)
 admin.site.register(Question)

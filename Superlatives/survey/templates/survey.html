@@ -4,6 +4,7 @@
 {% block title %}Cardenal Survey{% endblock %}
 
 {% block headincludes %}
+<link href="{{ MEDIA_URL }}css/survey.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/surveyjs"></script>
 {% endblock %}
 
@@ -16,10 +17,12 @@
   <div class="fieldWrapper">
     <label for="id_{{question.id}}">{{ question }}</label>
     <p><input type="text" class="inp_resident" id="id_{{ question.id }}"
-    name="resident" /></p>
+    name="resident" tabindex="{{ forloop.counter0 }}"/></p>
   </div>
   <p><input type="submit" class="button" value="Respond" /></p>
 </form>
+{% empty %}
+<h3>Ask Zahan / Brennan to add some questions to the db</h3>
 {% endfor %}
 
 {% endblock %}

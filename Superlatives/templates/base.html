@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}{% endblock %}</title>
+    <link href="{{ MEDIA_URL }}css/smoothness/jquery-ui.custom.css" type="text/css"
+    rel="stylesheet" />
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui.custom.js"></script>
     {% block headincludes %}{% endblock %}
 </head>
 <body>

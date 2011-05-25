@@ -1,0 +1,21 @@
+
+/* Overriding JQuery UI's awful defaults */
+
+.ui-widget-content {
+  font-family: serif;
+  font-size: 0.8em;
+  color: gray;
+  background: none;
+  background-color: white;
+  background-image: none;
+}
+
+.ui-corner-all {
+  border-radius: 0px;
+}
+
+#ui-active-menuitem {
+  background: none;
+  background-color: #dedede;
+}
+
