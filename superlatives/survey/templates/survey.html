@@ -9,17 +9,17 @@
 {% endblock %}
 
 {% block content %}
-
+<h3>Just tab to the first question, respond with a Cardenalian's name and hit
+  enter</h3>
 {% for question in questions %}
-<form action='/survey/' method='post'>
+<form action='/survey/' method='post' class='question_form'>
   {% csrf_token %}
   <input type="hidden" name="qid" value="{{ question.id }}" />
   <div class="fieldWrapper">
     <label for="id_{{question.id}}">{{ question }}</label>
     <p><input type="text" class="inp_resident" id="id_{{ question.id }}"
-    name="resident" tabindex="{{ forloop.counter0 }}"/></p>
+    name="resident" tabindex="{{ forloop.counter }}"/></p>
   </div>
-  <p><input type="submit" class="button" value="Respond" /></p>
 </form>
 {% empty %}
 <h3>Ask Zahan / Brennan to add some questions to the db</h3>
