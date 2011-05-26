@@ -20,6 +20,10 @@
     <p><input type="text" class="inp_resident" id="id_{{ question.id }}"
     name="resident" tabindex="{{ forloop.counter }}"
     value="{{ question.prevans }}"/></p>
+    {% if question.istwoand %}
+      <p><input type="text" class="inp_resident"
+      name="resident2" value="{{ question.prevans2 }}"/></p>
+    {% endif %}
   </div>
 </form>
 {% empty %}
