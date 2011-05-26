@@ -21,6 +21,7 @@ class Resident(models.Model):
   gender = models.CharField(max_length=1, choices=GENDER)
   year = models.CharField(max_length=1, choices=YEAR)
   staff = models.BooleanField(default=False)
+  sunetid = models.CharField(max_length=100, unique=True)
 
   def __unicode__(self):
     return self.name
@@ -33,7 +34,8 @@ class Question(models.Model):
 
 class Answer(models.Model):
   question = models.ForeignKey(Question)
-  resident = models.ForeignKey(Resident) # related_name = 'answer_set'
+  resident = models.ForeignKey(Resident, related_name="chosen_set")
+  answerer = models.ForeignKey(Resident, related_name="answered_set")
 
   def __unicode__(self):
     return str(self.question) + ": " + str(self.resident)
