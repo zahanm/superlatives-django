@@ -12,6 +12,9 @@ class RestoredQuestion:
     self.qtext = qtext
     self.prevans = prevans
 
+  def __unicode__(self):
+    return self.qtext
+
 def surveyjs(request):
   residents = Resident.objects.all()
   return render_to_response('survey.js', {'residents': residents},
