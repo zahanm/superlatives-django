@@ -28,6 +28,7 @@ class Resident(models.Model):
 
 class Question(models.Model):
   qtext = models.CharField(max_length=200, unique=True)
+  istwoans = models.BooleanField(default=False)
 
   def __unicode__(self):
     return self.qtext
