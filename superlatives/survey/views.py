@@ -7,7 +7,7 @@ from survey.models import Resident, Question, Answer
 from survey.utils import json_response
 
 class RestoredQuestion:
-  def __init__(self, id, qtext, prevans=None):
+  def __init__(self, id, qtext, prevans=''):
     self.id = id
     self.qtext = qtext
     self.prevans = prevans
