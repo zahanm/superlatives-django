@@ -17,14 +17,14 @@
   <input type="hidden" name="qid" value="{{ question.id }}" />
   <div class="fieldWrapper">
     <label for="id_{{question.id}}">{{ question }}</label>
-    {% if not answered[forloop.counter0] %}
+    {% if not question.prevans %}
     <p><input type="text" class="inp_resident" id="id_{{ question.id }}"
     name="resident" tabindex="{{ forloop.counter }}"/></p>
     {% else %}
     <p>
     <input type="text" class="inp_resident" id="id_{{ question.id }}"
     name="resident" tabindex="{{ forloop.counter }}" disabled="disabled"
-    value="{{ answered[forloop.counter0].resident }}"/>
+    value="{{ question.prevans }}"/>
     </p>
     {% endif %}
   </div>

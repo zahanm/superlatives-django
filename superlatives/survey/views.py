@@ -6,6 +6,12 @@ from django.shortcuts import render_to_response
 from survey.models import Resident, Question, Answer
 from survey.utils import json_response
 
+class RestoredQuestion:
+  def __init__(self, id, qtext, prevans=None):
+    self.id = id
+    self.qtext = qtext
+    self.prevans = prevans
+
 def surveyjs(request):
   residents = Resident.objects.all()
   return render_to_response('survey.js', {'residents': residents},
@@ -23,13 +29,14 @@ def survey(request):
   else:
     questions = Question.objects.all()
     answered_set = user.answered_set.all()
-    answered = [None] * questions.count()
-    for i, question in enumerate(questions):
+    restored_qs = []
+    for question in questions:
+      restored_qs.append(RestoredQuestion(question.id, question.qtext))
       matching_ans_set = answered_set.filter(question__exact=question)
       if matching_ans_set:
-        answered[i] = matching_ans_set.get()
-    return render_to_response('survey.html', {'questions': questions,
-      'answered': answered}, context_instance=RequestContext(request))
+        restored_qs[-1].prevans = matching_ans_set.get().resident
+    return render_to_response('survey.html', {'questions': restored_qs},
+        context_instance=RequestContext(request))
 
 def thanks(request):
   return HttpResponse("Thanks!", mimetype="text/plain")
