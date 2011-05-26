@@ -26,7 +26,7 @@ function ajaxQSubmit(form) {
       'qid': $(form).find(':hidden:first').val(),
       'resident': $(question).val()
     };
-    $.ajax('/survey/', {
+    $.ajax('survey/', {
       type: 'POST',
       data: ansdata,
       dataType: 'json',
