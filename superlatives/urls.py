@@ -10,10 +10,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r"^$", 'survey.views.survey'),
-    (r"^survey/", 'survey.views.survey'),
-    (r"^surveyjs$", 'survey.views.surveyjs'),
-    (r"^thanks$", 'survey.views.thanks'),
-    (r'^admin/', include(admin.site.urls)),
+    (r"^survey/?", 'survey.views.survey'),
+    (r"^surveyjs/?$", 'survey.views.surveyjs'),
+    (r"^thanks/?$", 'survey.views.thanks'),
+    (r'^admin/?', include(admin.site.urls)),
 
     # Example:
     # (r'^Superlatives/', include('Superlatives.foo.urls')),
