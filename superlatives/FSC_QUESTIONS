@@ -1,48 +1,17 @@
-# Sequel Pro dump
-# Version 2492
-# http://code.google.com/p/sequel-pro
-#
-# Host: mysql-user.stanford.edu (MySQL 5.1.49-3~bpo50+1-log)
-# Database: g_frosoco_superlatives
-# Generation Time: 2011-05-25 18:46:04 -0700
-# ************************************************************
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-
-# Dump of table names
-# ------------------------------------------------------------
-
 DROP TABLE IF EXISTS `names`;
-
 CREATE TABLE `names` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `full` char(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=192 DEFAULT CHARSET=latin1;
-
-
-# Dump of table questions
-# ------------------------------------------------------------
-
 DROP TABLE IF EXISTS `questions`;
-
 CREATE TABLE `questions` (
   `qid` int(11) NOT NULL AUTO_INCREMENT,
   `question` varchar(500) NOT NULL,
   `twoanswer` tinyint(1) NOT NULL,
   PRIMARY KEY (`qid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
-
 LOCK TABLES `questions` WRITE;
-/*!40000 ALTER TABLE `questions` DISABLE KEYS */;
 INSERT INTO `questions` (`qid`,`question`,`twoanswer`)
 VALUES
 	(6,'Most dedicated slacker?',0),
@@ -99,16 +68,8 @@ VALUES
 	(57,'Best Roommates?',1),
 	(58,'Hookup that should happen, but hasn\'t?',1),
 	(59,'Hookup that should have happened, and did?',1);
-
-/*!40000 ALTER TABLE `questions` ENABLE KEYS */;
 UNLOCK TABLES;
-
-
-# Dump of table responses_one
-# ------------------------------------------------------------
-
 DROP TABLE IF EXISTS `responses_one`;
-
 CREATE TABLE `responses_one` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `voter_sunet` varchar(50) DEFAULT NULL,
@@ -117,12 +78,7 @@ CREATE TABLE `responses_one` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `voter_qid` (`voter_sunet`,`qid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3498 DEFAULT CHARSET=latin1;
-
-# Dump of table responses_two
-# ------------------------------------------------------------
-
 DROP TABLE IF EXISTS `responses_two`;
-
 CREATE TABLE `responses_two` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `voter_sunet` char(50) DEFAULT NULL,
@@ -132,12 +88,3 @@ CREATE TABLE `responses_two` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `voter_question` (`voter_sunet`,`qid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=266 DEFAULT CHARSET=latin1;
-
-
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
