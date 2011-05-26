@@ -19,13 +19,13 @@ calendars now, it's at: <strong>6pm, Saturday 28 May</strong>. Be there!
 {% for question in questions %}
 <form action='survey/' method='post' class='question_form'>
   {% csrf_token %}
-  <input type="hidden" name="qid" value="{{ question.id }}" />
+  <input type="hidden" name="qid" class="question_id" value="{{ question.id }}" />
   <div class="fieldWrapper">
     <label for="id_{{question.id}}">{{ question }}</label>
     <p><input type="text" class="inp_resident" id="id_{{ question.id }}"
     name="resident" tabindex="{{ forloop.counter }}"
     value="{{ question.prevans }}"/></p>
-    {% if question.istwoand %}
+    {% if question.istwoans %}
       <p><input type="text" class="inp_resident"
       name="resident2" value="{{ question.prevans2 }}"/></p>
     {% endif %}

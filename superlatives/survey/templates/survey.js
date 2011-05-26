@@ -13,19 +13,25 @@ function checkIfResident(question) {
 }
 
 function ajaxQSubmit(form) {
-  var question = $(form).find('[type="text"]:first')[0];
-  checkIfResident(question);
-  if( $(question).val() ) {
+  var textinpsjq = $(form).find('.inp_resident');
+  var entered = true;
+  textinps.each(function(i, textinp) {
+    checkIfResident(textinp);
+    entered = entered && $(textinp).val()
+  });
+  if( entered ) {
     // disable input and flash opacity a little
-    $(question).attr("disabled", "disabled");
-    $(form).find(':submit:first').attr("disabled", "disabled");
+    textinps.attr("disabled", "disabled");
     $(form).effect('highlight', {}, "slow");
 
     // AJAX submit question
     var ansdata = {
-      'qid': $(form).find(':hidden:first').val(),
-      'resident': $(question).val()
+      'qid': $(form).find('.question_id').val(),
+      'resident': $(textinp[0]).val(),
     };
+    if(textinps.length == 2)
+      ansdata['resident2'] = $(textinp[1]).val()
+
     $.ajax('survey/', {
       type: 'POST',
       data: ansdata,
