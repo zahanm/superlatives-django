@@ -24,9 +24,9 @@ def survey(request):
   user = Resident.objects.get(sunetid=request.META['REMOTE_USER'])
   if request.method == "POST":
     answer = Answer(
-    question = Question.objects.get(id=request.POST['qid']),
-    resident = Resident.objects.get(name=request.POST['resident']) )
-    answerer = user
+      question = Question.objects.get(id=request.POST['qid']),
+      resident = Resident.objects.get(name=request.POST['resident']),
+      answerer = user)
     answer.save()
     return json_response({ 'success': True })
   else:
