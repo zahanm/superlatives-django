@@ -19,3 +19,40 @@
   background-color: #dedede;
 }
 
+body {
+/*  background: url(http://www.stanford.edu/group/resed/cgi-bin/flomo/eastflomo/img/title.png);
+  background-repeat-y: no-repeat; */
+  background: #900000;
+}
+
+#content {
+  width: 500px;
+  position: relative;
+  margin-left:200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: white;
+  margin-top: 30px;
+  box-shadow: 0px 0px 20px #333;
+  border-radius: 15px;
+}
+
+/* http://css-tricks.com/snippets/css/css-box-shadow/ */
+.fieldWrapper {
+  border-radius: 10px;
+  -moz-box-shadow: 0px 0px 10px #999;
+  -webkit-box-shadow: 0px 0px 10px #999;
+  box-shadow: 0px 0px 10px #999;
+  padding: 5px;
+  margin: 5px;
+}
+
+/*
+.fieldWrapper {
+  -moz-box-shadow: 5px 5px 5px #ccc;
+  -webkit-box-shadow: 5px 5px 5px #ccc;
+  box-shadow: 5px 5px 5px #ccc;
+}
+*/
