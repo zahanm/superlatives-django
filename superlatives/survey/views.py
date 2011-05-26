@@ -25,6 +25,8 @@ def survey(request):
   if request.method == "POST":
     question = Question.objects.get(id=request.POST['qid'])
     resident = Resident.objects.get(name=request.POST['resident'])
+    if question.istwoans:
+      resident2 = Resident.objects.get(name=request.POST['resident2'])
     try:
       answer = Answer.objects.get(
           question = question,
@@ -34,6 +36,8 @@ def survey(request):
           question = question,
           answerer = user)
     answer.resident = resident
+    if question.istwoans:
+      answer.resident2 = residnet2
     answer.save()
     return json_response({ 'success': True })
   else:
