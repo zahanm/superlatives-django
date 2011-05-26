@@ -32,7 +32,7 @@ function ajaxQSubmit(form) {
       dataType: 'json',
       success: function(data, textStatus, jqXHR) {
         setTimeout(function() {
-          $(form).fadeOut(1000);
+          $(form).fadeOut('fast');
         }, 1500);
       }
     });

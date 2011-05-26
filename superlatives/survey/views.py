@@ -23,10 +23,17 @@ def surveyjs(request):
 def survey(request):
   user = Resident.objects.get(sunetid=request.META['REMOTE_USER'])
   if request.method == "POST":
-    answer = Answer(
-      question = Question.objects.get(id=request.POST['qid']),
-      resident = Resident.objects.get(name=request.POST['resident']),
-      answerer = user)
+    question = Question.objects.get(id=request.POST['qid'])
+    resident = Resident.objects.get(name=request.POST['resident'])
+    try:
+      answer = Answer.objects.get(
+          question = question,
+          answerer = user)
+    except Answer.DoesNotExist:
+      answer = Answer(
+          question = question,
+          answerer = user)
+    answer.resident = resident
     answer.save()
     return json_response({ 'success': True })
   else:
