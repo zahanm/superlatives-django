@@ -22,7 +22,12 @@ def survey(request):
     return json_response({ 'success': True })
   else:
     questions = Question.objects.all()
-    answered = user.answered_set.all()
+    answered_set = user.answered_set.all()
+    answered = [None] * questions.count()
+    for i, question in enumerate(questions):
+      matching_ans_set = answered_set.filter(question__exact=question)
+      if matching_ans_set:
+        answered[i] = matching_ans_set.get()
     return render_to_response('survey.html', {'questions': questions,
       'answered': answered}, context_instance=RequestContext(request))
 
