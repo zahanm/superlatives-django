@@ -39,7 +39,7 @@ def survey(request):
           answerer = user)
     answer.resident = resident
     if question.istwoans:
-      answer.resident2 = residnet2
+      answer.resident2 = resident2
     answer.save()
     return json_response({ 'success': True })
   else:
