@@ -13,7 +13,7 @@ function checkIfResident(question) {
 }
 
 function ajaxQSubmit(form) {
-  var textinpsjq = $(form).find('.inp_resident');
+  var textinps = $(form).find('.inp_resident');
   var entered = true;
   textinps.each(function(i, textinp) {
     checkIfResident(textinp);
@@ -49,8 +49,15 @@ function ajaxQSubmit(form) {
 // Suppress enter submissions
 function rerouteEnter(e) {
   if ( e.which == 13 ) {
-    $(e.target).closest('form').next().find('.inp_resident').focus();
-    ajaxQSubmit($(e.target).closest('form')[0]);
+    var textinps = $(e.target).closest('form').find('.inp_resident');
+    var form = $(e.target).closest('form');
+    textinps.each(function (i, inp) {
+      if($(inp).val() == '') {
+        $(inp).focus();
+        return false;
+      }
+    });
+    ajaxQSubmit(form);
     return false;
   }
   return true;
