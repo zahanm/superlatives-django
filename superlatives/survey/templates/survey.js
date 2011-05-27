@@ -57,6 +57,7 @@ function rerouteEnter(e) {
         return false;
       }
     });
+    $(form).next().find('.inp_resident:first').focus()
     ajaxQSubmit(form);
     return false;
   }
