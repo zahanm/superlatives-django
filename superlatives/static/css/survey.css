@@ -39,6 +39,11 @@ body {
   border-radius: 15px;
 }
 
+.tbutton {
+  width: 225px;
+  padding: 5px;
+}
+
 /* http://css-tricks.com/snippets/css/css-box-shadow/ */
 .fieldWrapper {
   border-radius: 10px;

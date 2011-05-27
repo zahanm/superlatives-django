@@ -82,6 +82,21 @@ function initialize() {
     autoFocus: true,
     delay: 50
   });
+
+  $('#showallbutton').click(function() {
+    $('.question_form:hidden').fadeIn('fast');
+  });
+  $('#hideallbutton').click(function() {
+    $('.question_form').filter(':visible').each(function(i,form) {
+      filled = true;
+      $(form).find('.inp_resident').each(function(j,inp) {
+         filled = filled && ($(inp).val() != '');
+      });
+      if(filled) {
+        $(form).fadeOut('fast');
+      }
+    });
+  });
 }
 
 $(initialize);
