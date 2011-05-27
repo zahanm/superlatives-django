@@ -51,12 +51,16 @@ function rerouteEnter(e) {
   if ( e.which == 13 ) {
     var textinps = $(e.target).closest('form').find('.inp_resident');
     var form = $(e.target).closest('form');
+    var clean = true;
     textinps.each(function (i, inp) {
       if($(inp).val() == '') {
         $(inp).focus();
-        return false;
+        clean = false;
       }
     });
+    if(!clean) {
+      return false;
+    }
     $(form).next().find('.inp_resident:first').focus()
     ajaxQSubmit(form);
     return false;
