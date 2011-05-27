@@ -40,8 +40,9 @@ body {
 }
 
 .tbutton {
-  width: 225px;
+  width: 245px;
   padding: 5px;
+  margin-bottom: 15px;
 }
 
 /* http://css-tricks.com/snippets/css/css-box-shadow/ */
