@@ -27,11 +27,11 @@ function ajaxQSubmit(form) {
     // AJAX submit question
     var ansdata = {
       'qid': $(form).find('.question_id').val(),
-      'resident': $(textinp[0]).val(),
+      'resident': $(textinps[0]).val()
     };
-    if(textinps.length == 2)
-      ansdata['resident2'] = $(textinp[1]).val()
-
+    if(textinps.length == 2) {
+      ansdata['resident2'] = $(textinps[1]).val();
+    }
     $.ajax('survey/', {
       type: 'POST',
       data: ansdata,
