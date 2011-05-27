@@ -59,6 +59,9 @@ function rerouteEnter(e) {
       }
     });
     if(!clean) {
+      if(textinps.length == 1) {
+        $(form).next().find('.inp_resident').focus()
+      }
       return false;
     }
     $(form).next().find('.inp_resident:first').focus()
