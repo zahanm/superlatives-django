@@ -188,7 +188,7 @@
         "model": "survey.question",
         "fields": {
             "qtext": "Dorm Mom / Dad?",
-            "istwoans": true
+            "istwoans": false
         }
     },
     {
