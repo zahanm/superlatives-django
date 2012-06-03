@@ -17,8 +17,3 @@ urlpatterns = patterns('',
     (r'^admin/?', include(admin.site.urls)),
     (r'^webauth/', include('webauth.urls'))
 )
-
-# urlpatterns += patterns('django.views.static',
-#   (r'^static/(?P<path>.*)$', 'serve', {
-#     'document_root': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static') }),
-# )

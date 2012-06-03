@@ -54,6 +54,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.staticfiles',
     'webauth.middleware.WebauthMiddleware'
 )
 
@@ -62,6 +63,10 @@ ROOT_URLCONF = 'urls'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates'),
+)
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
 )
 
 INSTALLED_APPS = (

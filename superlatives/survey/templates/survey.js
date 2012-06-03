@@ -71,10 +71,22 @@ function rerouteEnter(e) {
   return true;
 }
 
+function inputsfilled (question) {
+  inps = $(question).find('.inp_resident');
+  return inps.toArray().every(function(inp) { return !!inp.value; });
+}
+
 function initialize() {
   $('.inp_resident').blur(function(e) { checkIfResident(e.target) });
   $('.question_form').submit(function(e) { ajaxQSubmit(e.target) });
   $('.inp_resident').keypress(rerouteEnter);
+
+  // disable filled in answers
+  $('.question_form').each(function(i, question) {
+    if ( inputsfilled(question) ) {
+      $(question).find('.inp_resident').attr('disabled', true);
+    }
+  });
 
   // code to make autocomplete work
   $('.inp_resident').autocomplete({
@@ -88,13 +100,7 @@ function initialize() {
   });
   $('#hideallbutton').click(function() {
     $('.question_form').filter(':visible').each(function(i,form) {
-      filled = true;
-      $(form).find('.inp_resident').each(function(j,inp) {
-         filled = filled && ($(inp).val() != '');
-      });
-      if(filled) {
-        $(form).fadeOut('fast');
-      }
+      if( inputsfilled(form) ) { $(form).fadeOut('fast'); }
     });
   });
 }
