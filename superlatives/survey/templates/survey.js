@@ -81,10 +81,11 @@ function initialize() {
   $('.question_form').submit(function(e) { ajaxQSubmit(e.target) });
   $('.inp_resident').keypress(rerouteEnter);
 
-  // disable filled in answers
+  // disable and hide filled in answers
   $('.question_form').each(function(i, question) {
     if ( inputsfilled(question) ) {
       $(question).find('.inp_resident').attr('disabled', true);
+      $(question).hide();
     }
   });
 
