@@ -10,9 +10,9 @@
 
 {% block content %}
 <h1> Cardenal's Superlative Quiz!</h1>
-<p> There are no wrong answers. Just enter who you want! The results will be 
-tabulated and used in the Dorm Feud game show during Banquet. Mark your 
-calendars now, it's at: <strong>6pm, Saturday 28 May</strong>. Be there! 
+<p> There are no wrong answers. Just enter who you want! The results will be
+tabulated and used in the Dorm Feud game show during Banquet. Mark your
+calendars now, it's at: <strong>{{ feuddatetime }}</strong>. Be there!
 
 <h3>Just tab to the first question, respond with a Cardenalian's name and hit
   enter</h3> <p> <strong>Hint:</strong> You can simply hit Enter, to go between questions.</p>
@@ -34,10 +34,10 @@ calendars now, it's at: <strong>6pm, Saturday 28 May</strong>. Be there!
   </div>
 </form>
 {% empty %}
-<h3>Ask Zahan / Brennan to add some questions to the db</h3>
+<h3>Ask your staff to add some questions to the db</h3>
 {% endfor %}
 
-<small>Written by Zahan Malkani, and Brennan Saeta</small>
+<small>Written by <a href="http://zahanm.com">Zahan Malkani</a>, and Brennan Saeta</small>
 
 {% endblock %}
 

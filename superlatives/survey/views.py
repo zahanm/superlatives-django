@@ -6,6 +6,8 @@ from django.shortcuts import render_to_response
 from survey.models import Resident, Question, Answer
 from survey.utils import json_response
 
+from django.conf import settings
+
 class RestoredQuestion:
   def __init__(self, id, qtext, istwoans, prevans='', prevans2=''):
     self.id = id
@@ -23,7 +25,7 @@ def surveyjs(request):
       context_instance=RequestContext(request), mimetype="text/javascript")
 
 def survey(request):
-  user = Resident.objects.get(sunetid=request.META['REMOTE_USER'])
+  user = Resident.objects.get(sunetid='zahanm') # request.META['REMOTE_USER']
   if request.method == "POST":
     question = Question.objects.get(id=request.POST['qid'])
     resident = Resident.objects.get(name=request.POST['resident'])
@@ -54,7 +56,7 @@ def survey(request):
         restored_qs[-1].prevans = matching_ans_set.get().resident
         if restored_qs[-1].istwoans:
           restored_qs[-1].prevans2 = matching_ans_set.get().resident2
-    return render_to_response('survey.html', {'questions': restored_qs},
+    return render_to_response('survey.html', {'questions': restored_qs, 'feuddatetime': settings.FEUD_DATE_TIME},
         context_instance=RequestContext(request))
 
 def thanks(request):

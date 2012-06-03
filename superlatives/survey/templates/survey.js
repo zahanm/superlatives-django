@@ -39,7 +39,7 @@ function ajaxQSubmit(form) {
       success: function(data, textStatus, jqXHR) {
         setTimeout(function() {
           $(form).fadeOut('fast');
-        }, 1500);
+        }, 500);
       }
     });
   }
@@ -48,7 +48,7 @@ function ajaxQSubmit(form) {
 
 // Suppress enter submissions
 function rerouteEnter(e) {
-  if ( e.which == 13 ) {
+  if ( e.which == 13 ) { // enter key
     var textinps = $(e.target).closest('form').find('.inp_resident');
     var form = $(e.target).closest('form');
     var clean = true;
