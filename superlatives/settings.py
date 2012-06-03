@@ -80,7 +80,7 @@ INSTALLED_APPS = (
 )
 
 # Family feud specific settings
-FEUD_DATE_TIME = '6pm, Saturday June 9'
+FEUD_DATE_TIME = '5:30pm, Saturday June 9'
 
 # Webauth configuration
 WEBAUTH_SHARED_SECRET = '1472744213804086233448376697319099995645' # just some random secret
