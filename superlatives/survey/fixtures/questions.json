@@ -1,0 +1,682 @@
+[
+    {
+        "pk": 2,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be asleep at 5pm?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 3,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be awake at 5am?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 6,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best Couple that is (couple = loosely interpreted)?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 7,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best Couple that never was?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 8,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Odd couple?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 9,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Whose door is always open?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 10,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Dorm fashionista?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 11,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most fliratious?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 12,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be famous?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 13,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most like to become the next Zahan Malkani, Spencer Craven, or Katie Ridley (live in FloMo for his whole Stanford career)?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 15,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Who is so hot and doesn’t know it?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 16,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to hook up with a faculty member?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 17,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to hook up with a sketchy grad student?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 18,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to become a sketchy grad student?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 21,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to marry another Cardenalian?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 22,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most naked?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 24,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Least likely to be in the shower?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 25,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be in the shower?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 26,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Party room?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 28,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be found playing ping pong?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 29,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most accident prone?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 30,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to stage a coup against the government?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 31,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to become a rock star?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 32,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to save the planet?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 33,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best roommates?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 34,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Roommates that should have been?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 35,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Who shows the most flove?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 36,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to become a SLE section leader?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 37,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to rule a small island nation?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 40,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Dorm Mom/Dad?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 41,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to stalk someone on the Facebook?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 42,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to post on your Facebook wall?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 44,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Loudest?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 46,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Funniest drunk?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 47,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to pull an all-nighter?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 48,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be asleep in the lounge?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 49,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Cardenalian you would take home to meet your parents?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 50,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Dirtiest Mind?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 51,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Who is your secret crush:",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 52,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most dedicated slacker?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 53,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to make you laugh?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 54,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to perform in Carnegie Hall?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 55,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to win a Nobel Prize?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 56,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most fun at a party?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 58,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to talk to themselves incessantly once they are in a world without chat lists?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 59,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be late to their own funeral?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 60,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Biggest flirt?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 61,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Sweetest?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 62,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most creative?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 63,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best smile?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 64,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best laugh?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 65,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be a multi-millionaire?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 66,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to dance on Broadway?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 67,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to have a book-signing at Border's?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 68,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be a professor?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 69,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to miss their own wedding to take someone to the airport?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 70,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Person with whom you would like to be stranded on a desert island?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 71,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to live in a house with a white picket fence and have 2.4 kids?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 72,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most creative procrastinator?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 73,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to climb to the top of Mount Everest (or Olympus Mons)?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 74,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to win an Oscar?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 75,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Future American Idol?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 76,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be an Olympian?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 77,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most committed to Cardenal?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 78,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "First to get married?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 79,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Makes everything look like a breeze?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 80,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to marry a fellow resident?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 81,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Friendliest resident?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 82,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to triple major?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 83,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be on staff (this year's and next year's staff don't count)?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 84,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to live in Cardenal all four years (and hasn't yet)?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 85,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to try to seduce an RA?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 86,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to make a difference?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 87,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best person to talk to when you're having a bad day?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 88,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Greatest sleep debt?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 89,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Best room to hang out in?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 90,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most beautifully decorated room?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 91,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Worst pigsty?",
+            "istwoans": true
+        }
+    },
+    {
+        "pk": 92,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be President of the U.S.?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 93,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to pull a coup de etat to become dictator of a territory?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 94,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most huggable?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 95,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most ridiculously good looking?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 96,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Who has the best whiteboard?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 98,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to make millions as a professional gamer?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 101,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Cutest Couple?",
+            "istwoans": true
+        }
+    }
+]
