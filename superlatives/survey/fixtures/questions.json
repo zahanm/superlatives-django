@@ -16,26 +16,10 @@
         }
     },
     {
-        "pk": 6,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Best Couple that is (couple = loosely interpreted)?",
-            "istwoans": true
-        }
-    },
-    {
         "pk": 7,
         "model": "survey.question",
         "fields": {
             "qtext": "Best Couple that never was?",
-            "istwoans": true
-        }
-    },
-    {
-        "pk": 8,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Odd couple?",
             "istwoans": true
         }
     },
@@ -59,7 +43,7 @@
         "pk": 11,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most fliratious?",
+            "qtext": "Most flirtatious?",
             "istwoans": false
         }
     },
@@ -75,7 +59,7 @@
         "pk": 13,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most like to become the next Zahan Malkani, Spencer Craven, or Katie Ridley (live in FloMo for his whole Stanford career)?",
+            "qtext": "Most like to become the next Zahan (live in FloMo for four years) ?",
             "istwoans": false
         }
     },
@@ -88,18 +72,10 @@
         }
     },
     {
-        "pk": 16,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to hook up with a faculty member?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 17,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most likely to hook up with a sketchy grad student?",
+            "qtext": "Most likely to hook up with a grad student?",
             "istwoans": false
         }
     },
@@ -128,14 +104,6 @@
         }
     },
     {
-        "pk": 24,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Least likely to be in the shower?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 25,
         "model": "survey.question",
         "fields": {
@@ -152,14 +120,6 @@
         }
     },
     {
-        "pk": 28,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to be found playing ping pong?",
-            "istwoans": true
-        }
-    },
-    {
         "pk": 29,
         "model": "survey.question",
         "fields": {
@@ -172,14 +132,6 @@
         "model": "survey.question",
         "fields": {
             "qtext": "Most likely to stage a coup against the government?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 31,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to become a rock star?",
             "istwoans": false
         }
     },
@@ -235,23 +187,15 @@
         "pk": 40,
         "model": "survey.question",
         "fields": {
-            "qtext": "Dorm Mom/Dad?",
-            "istwoans": false
+            "qtext": "Dorm Mom / Dad?",
+            "istwoans": true
         }
     },
     {
         "pk": 41,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most likely to stalk someone on the Facebook?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 42,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to post on your Facebook wall?",
+            "qtext": "Most likely to stalk someone on Facebook?",
             "istwoans": false
         }
     },
@@ -307,7 +251,7 @@
         "pk": 51,
         "model": "survey.question",
         "fields": {
-            "qtext": "Who is your secret crush:",
+            "qtext": "Who is your secret crush?",
             "istwoans": false
         }
     },
@@ -352,34 +296,10 @@
         }
     },
     {
-        "pk": 58,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to talk to themselves incessantly once they are in a world without chat lists?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 59,
         "model": "survey.question",
         "fields": {
             "qtext": "Most likely to be late to their own funeral?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 60,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Biggest flirt?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 61,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Sweetest?",
             "istwoans": false
         }
     },
@@ -416,14 +336,6 @@
         }
     },
     {
-        "pk": 66,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to dance on Broadway?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 67,
         "model": "survey.question",
         "fields": {
@@ -440,14 +352,6 @@
         }
     },
     {
-        "pk": 69,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to miss their own wedding to take someone to the airport?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 70,
         "model": "survey.question",
         "fields": {
@@ -459,7 +363,7 @@
         "pk": 71,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most likely to live in a house with a white picket fence and have 2.4 kids?",
+            "qtext": "Most likely to live in a house with a white picket fence and have 2.1 kids?",
             "istwoans": false
         }
     },
@@ -475,7 +379,7 @@
         "pk": 73,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most likely to climb to the top of Mount Everest (or Olympus Mons)?",
+            "qtext": "Most likely to climb to the top of Mount Everest?",
             "istwoans": false
         }
     },
@@ -496,22 +400,6 @@
         }
     },
     {
-        "pk": 76,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to be an Olympian?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 77,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most committed to Cardenal?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 78,
         "model": "survey.question",
         "fields": {
@@ -524,14 +412,6 @@
         "model": "survey.question",
         "fields": {
             "qtext": "Makes everything look like a breeze?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 80,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to marry a fellow resident?",
             "istwoans": false
         }
     },
@@ -560,14 +440,6 @@
         }
     },
     {
-        "pk": 84,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Most likely to live in Cardenal all four years (and hasn't yet)?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 85,
         "model": "survey.question",
         "fields": {
@@ -588,14 +460,6 @@
         "model": "survey.question",
         "fields": {
             "qtext": "Best person to talk to when you're having a bad day?",
-            "istwoans": false
-        }
-    },
-    {
-        "pk": 88,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Greatest sleep debt?",
             "istwoans": false
         }
     },
@@ -627,7 +491,7 @@
         "pk": 92,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most likely to be President of the U.S.?",
+            "qtext": "Most likely to be President of their home nation?",
             "istwoans": false
         }
     },
@@ -635,7 +499,7 @@
         "pk": 93,
         "model": "survey.question",
         "fields": {
-            "qtext": "Most likely to pull a coup de etat to become dictator of a territory?",
+            "qtext": "Most likely to pull a coup d’état to become dictator of a territory?",
             "istwoans": false
         }
     },
@@ -656,14 +520,6 @@
         }
     },
     {
-        "pk": 96,
-        "model": "survey.question",
-        "fields": {
-            "qtext": "Who has the best whiteboard?",
-            "istwoans": false
-        }
-    },
-    {
         "pk": 98,
         "model": "survey.question",
         "fields": {
@@ -677,6 +533,38 @@
         "fields": {
             "qtext": "Cutest Couple?",
             "istwoans": true
+        }
+    },
+    {
+        "pk": 103,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to become a cat lady?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 104,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to be featured on the TV show ‘Hoarders’?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 105,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to establish a permanent base on Mars?",
+            "istwoans": false
+        }
+    },
+    {
+        "pk": 106,
+        "model": "survey.question",
+        "fields": {
+            "qtext": "Most likely to go to jail?",
+            "istwoans": false
         }
     }
 ]
