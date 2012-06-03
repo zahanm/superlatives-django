@@ -63,7 +63,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'webauth.middleware.WebauthMiddleware'
 )
 
 ROOT_URLCONF = 'urls'
@@ -79,8 +79,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'webauth',
     'survey',
 )
 
 # Family feud specific settings
 FEUD_DATE_TIME = '6pm, Saturday June 9'
+
+# Webauth configuration
+WEBAUTH_SHARED_SECRET = '1472744213804086233448376697319099995645' # just some random secret
+WEBAUTH_URL = 'https://www.stanford.edu/~pcostell/cgi-bin/wa-authenticate.php'
+LOGIN_URL = '/webauth/login'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+BASE_URL = 'http://superlatives.zahanm.com/'

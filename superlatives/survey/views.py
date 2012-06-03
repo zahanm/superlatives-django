@@ -2,6 +2,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from django.contrib.auth.decorators import login_required
 
 from survey.models import Resident, Question, Answer
 from survey.utils import json_response
@@ -24,8 +25,9 @@ def surveyjs(request):
   return render_to_response('survey.js', {'residents': residents},
       context_instance=RequestContext(request), mimetype="text/javascript")
 
+@login_required
 def survey(request):
-  user = Resident.objects.get(sunetid='zahanm') # request.META['REMOTE_USER']
+  user = Resident.objects.get(sunetid=request.user.username)
   if request.method == "POST":
     question = Question.objects.get(id=request.POST['qid'])
     resident = Resident.objects.get(name=request.POST['resident'])
