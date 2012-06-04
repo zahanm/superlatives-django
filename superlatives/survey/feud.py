@@ -24,7 +24,7 @@ def top_k_for_question(question, k):
     else:
       groups.append( (iterlen(group), resident.name, None) )
   groups.sort(reverse=True)
-  return map( lambda g: { 'one': g[1], 'two': g[2] }, groups[:k] )
+  return map( lambda g: { 'one': g[1], 'two': g[2], 'number': g[0] }, groups[:k] )
 
 def iterlen(it):
   return sum(1 for _ in it)

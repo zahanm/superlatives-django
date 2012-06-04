@@ -10,6 +10,10 @@ body {
   background-color: #800;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   background-color: white;
   margin-left: 50px;
@@ -39,9 +43,11 @@ body {
   {% for result in results %}
   <div class="question">
     <h3>{{ result.question }}</h3>
-    <ol>
+    <ul>
     {% for answer in result.answers %}
       <li>
+        <span>{{ answer.number }}</span>
+        &mdash;
         <span>{{ answer.one }}</span>
       {% if answer.two %}
         and <span>{{ answer.two }}</span>
@@ -50,7 +56,7 @@ body {
     {% empty %}
       <li>No answers</li>
     {% endfor %}
-    </ol>
+    </ul>
   </div>
   {% empty %}
   <h3>Get people to start answering!</h3>
