@@ -13,7 +13,7 @@ YEAR = (
   ('s', 'Sophomore'),
   ('j', 'Junior'),
   ('r', 'Senior'),
-) 
+)
 
 
 class Resident(models.Model):
@@ -35,8 +35,8 @@ class Question(models.Model):
 
 class Answer(models.Model):
   question = models.ForeignKey(Question)
-  resident = models.ForeignKey(Resident, related_name="chosen_set")
-  resident2 = models.ForeignKey(Resident, default=None, null=True, related_name="chosen2_set")
+  resident = models.ForeignKey(Resident)
+  resident2 = models.ForeignKey(Resident, default=None, null=True, related_name="answer2_set")
   answerer = models.ForeignKey(Resident, related_name="answered_set")
 
   def __unicode__(self):

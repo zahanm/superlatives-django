@@ -1,13 +1,15 @@
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.contrib.auth.decorators import login_required
 
 from survey.models import Resident, Question, Answer
 from survey.utils import json_response
 
 from django.conf import settings
+
+import feud
 
 class RestoredQuestion:
   def __init__(self, id, qtext, istwoans, prevans='', prevans2=''):
@@ -60,6 +62,12 @@ def survey(request):
           restored_qs[-1].prevans2 = matching_ans_set.get().resident2
     return render_to_response('survey.html', {'questions': restored_qs, 'feuddatetime': settings.FEUD_DATE_TIME},
         context_instance=RequestContext(request))
+
+@login_required
+def results(request):
+  if request.user.username not in settings.STAFF_SUNETIDS:
+    return redirect('/')
+  return HttpResponse(str(feud.export_top_k(6)), mimetype="text/plain")
 
 def thanks(request):
   return HttpResponse("Thanks!", mimetype="text/plain")

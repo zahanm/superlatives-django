@@ -12,6 +12,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+STAFF_SUNETIDS = frozenset(['zahanm', 'ssterman'])
+
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.sqlite3',
