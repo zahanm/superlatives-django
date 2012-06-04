@@ -67,7 +67,8 @@ def survey(request):
 def results(request):
   if request.user.username not in settings.STAFF_SUNETIDS:
     return redirect('/')
-  return HttpResponse(str(feud.export_top_k()), mimetype="text/plain")
+  return render_to_response('results.html', { 'results': feud.export_top_k() },
+    context_instance=RequestContext(request))
 
 def thanks(request):
   return HttpResponse("Thanks!", mimetype="text/plain")

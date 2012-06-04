@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block headincludes %}
+<style type="text/css" media="screen">
+
+body {
+  background-color: #800;
+}
+
+.container {
+  background-color: white;
+  margin-left: 50px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #333;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+.question {
+  margin: 6px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #333;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <h1>Results</h1>
+
+  {% for result in results %}
+  <div class="question">
+    <h3>{{ result.question }}</h3>
+    <ul>
+    {% for answer in result.answers %}
+      <li>
+        <span>{{ answer.one }}</span>
+      {% if answer.two %}
+        and <span>{{ answer.two }}</span>
+      {% endif %}
+      </li>
+    {% empty %}
+      <li>No answers</li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% empty %}
+  <h3>Get people to start answering!</h3>
+  {% endfor %}
+
+  <small>Written by <a href="http://zahanm.com">Zahan Malkani</a></small>
+
+</div>
+
+{% endblock %}
