@@ -39,7 +39,7 @@ body {
   {% for result in results %}
   <div class="question">
     <h3>{{ result.question }}</h3>
-    <ul>
+    <ol>
     {% for answer in result.answers %}
       <li>
         <span>{{ answer.one }}</span>
@@ -50,7 +50,7 @@ body {
     {% empty %}
       <li>No answers</li>
     {% endfor %}
-    </ul>
+    </ol>
   </div>
   {% empty %}
   <h3>Get people to start answering!</h3>
