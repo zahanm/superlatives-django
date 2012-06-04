@@ -22,7 +22,7 @@ calendars now, it's at: <strong>{{ feuddatetime }}</strong>. Be there!
 <button id='showallbutton' class='tbutton' type="button">Show answered</button>
 <button id='hideallbutton' class='tbutton' type='button'>Hide answered</button>
 {% for question in questions %}
-<form action='survey/' method='post' class='question_form'>
+<form action='/survey/' method='post' class='question_form'>
   {% csrf_token %}
   <input type="hidden" name="qid" class="question_id" value="{{ question.id }}" />
   <div class="fieldWrapper">

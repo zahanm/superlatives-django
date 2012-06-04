@@ -66,6 +66,7 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates'),
 )
 
+STATIC_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'deployed')
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
 )
