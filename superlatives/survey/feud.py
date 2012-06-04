@@ -15,9 +15,12 @@ def export_top_k(k=6):
 def top_k_for_question(question, k):
   answers = question.answer_set.order_by('resident', 'resident2')
   groups = []
+  if not len(answers):
+    return []
   for resident, group in itertools.groupby(answers, lambda a: a.resident):
     if question.istwoans:
-      groups.append( (iterlen(group), resident.name, group[0].resident2.name) )
+      g = list(group)
+      groups.append( (len(g), resident.name, g[0].resident2.name) )
     else:
       groups.append( (iterlen(group), resident.name) )
   groups.sort(reverse=True)
