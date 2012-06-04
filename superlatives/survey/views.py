@@ -67,7 +67,7 @@ def survey(request):
 def results(request):
   if request.user.username not in settings.STAFF_SUNETIDS:
     return redirect('/')
-  return HttpResponse(str(feud.export_top_k(6)), mimetype="text/plain")
+  return HttpResponse(str(feud.export_top_k()), mimetype="text/plain")
 
 def thanks(request):
   return HttpResponse("Thanks!", mimetype="text/plain")
