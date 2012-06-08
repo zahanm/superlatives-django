@@ -4,6 +4,7 @@
 {% block title %}Presentation{% endblock %}
 
 {% block headincludes %}
+<link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" charset="utf-8">
 <style type="text/css" media="screen">
 
 body {
@@ -28,6 +29,9 @@ ul {
 
 .answer {
   opacity: 0;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .actions {
@@ -64,9 +68,9 @@ ul {
   </ul>
 
   <div class="actions">
-    <button class="prev" >Previous</button>
-    <button class="reveal" >Reveal</button>
-    <button class="next" >Next</button>
+    <button class="btn btn-large prev" >Previous</button>
+    <button class="btn btn-large btn-primary reveal" >Reveal</button>
+    <button class="btn btn-large next" >Next</button>
   </div>
 
   <div class="footer">
