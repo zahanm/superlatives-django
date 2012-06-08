@@ -70,6 +70,17 @@ def results(request):
   return render_to_response('results.html', { 'results': feud.export_top_k() },
     context_instance=RequestContext(request))
 
+@login_required
+def presentation(request, qoffset='0'):
+  if request.user.username not in settings.STAFF_SUNETIDS:
+    return redirect('/')
+  qoffset = int(qoffset)
+  if qoffset >= Question.objects.count():
+    return redirect('/')
+  q = Question.objects.order_by('pk')[qoffset]
+  return render_to_response('presentation.html', { 'result': feud.top_k_for_question(q) },
+    context_instance=RequestContext(request))
+
 def thanks(request):
   return HttpResponse("Thanks!", mimetype="text/plain")
 

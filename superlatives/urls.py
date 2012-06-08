@@ -14,6 +14,8 @@ urlpatterns = patterns('',
     (r"^survey/?$", 'survey.views.survey'),
     (r"^surveyjs/?$", 'survey.views.surveyjs'),
     (r"^results/?$", 'survey.views.results'),
+    (r"^presentation/?$", 'survey.views.presentation'),
+    (r"^presentation/(?P<qoffset>\d+)/?$", 'survey.views.presentation'),
     (r"^thanks/?$", 'survey.views.thanks'),
     (r'^admin/?', include(admin.site.urls)),
     (r'^webauth/', include('webauth.urls'))
