@@ -15,20 +15,28 @@ ul {
 }
 
 .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
   background-color: white;
-  margin-left: 50px;
   padding: 20px;
   box-shadow: 0px 0px 20px #333;
   border-radius: 15px;
   max-width: 600px;
 }
 
-.question {
-  margin: 6px;
-  padding: 10px;
-  box-shadow: 0px 0px 10px #333;
-  border-radius: 15px;
-  max-width: 500px;
+.answer {
+  opacity: 0;
+}
+
+.actions {
+  text-align: center;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
 }
 
 </style>
@@ -38,28 +46,76 @@ ul {
 
 <div class="container">
 
-  <h1>Question</h1>
+  <h2>{{ result.question }}</h2>
 
-  <div class="question">
-    <h3>{{ result.question }}</h3>
-    <ul>
-    {% for answer in result.answers %}
-      <li>
-        <span>{{ answer.number }}</span>
-        &mdash;
-        <span>{{ answer.one }}</span>
-      {% if answer.two %}
-        and <span>{{ answer.two }}</span>
-      {% endif %}
-      </li>
-    {% empty %}
-      <li>No answers</li>
-    {% endfor %}
-    </ul>
+  <ul>
+  {% for answer in result.answers %}
+    <li class="answer">
+      <span>{{ answer.number }}</span>
+      &mdash;
+      <span>{{ answer.one }}</span>
+    {% if answer.two %}
+      and <span>{{ answer.two }}</span>
+    {% endif %}
+    </li>
+  {% empty %}
+    <li class="answer">No answers</li>
+  {% endfor %}
+  </ul>
+
+  <div class="actions">
+    <button class="prev" >Previous</button>
+    <button class="reveal" >Reveal</button>
+    <button class="next" >Next</button>
   </div>
 
-  <small>Written by <a href="http://zahanm.com">Zahan Malkani</a></small>
+  <div class="footer">
+    <small>Written by <a href="http://zahanm.com">Zahan Malkani</a></small>
+  </div>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+(function(exports) {
+
+  exports.actions = function(domnode) {
+    var match, qoffset, previous, next, reveal;
+
+    match = window.location.pathname.match(/^\/presentation\/(\d+)/);
+    qoffset = Number(match && match[1]); // get desired behaviour of default => 0
+
+    previous = domnode.querySelector('.actions .prev');
+    next = domnode.querySelector('.actions .next');
+    reveal = domnode.querySelector('.actions .reveal');
+
+    if (!previous || !next || !reveal) {
+      console.warn('Problem with html');
+      return;
+    }
+
+    previous.addEventListener('click', function(ev) {
+      if ( !!qoffset ) {
+        window.location.assign( '/presentation/' + String( qoffset - 1 ) );
+      }
+    });
+
+    next.addEventListener('click', function(ev) {
+      window.location.assign( '/presentation/' + String( qoffset + 1 ) );
+    });
+
+    reveal.addEventListener('click', function(ev) {
+      $('.answer', domnode).animate({ opacity: 1 });
+    });
+  };
+
+}(window.Startup = {}));
+
+$(document).ready(function() {
+  Startup.actions(document);
+});
+
+</script>
 
 {% endblock %}
