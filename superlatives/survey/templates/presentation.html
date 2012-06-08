@@ -66,7 +66,7 @@ table thead {
       <td>Selection</td>
     </thead>
     {% for answer in result.answers %}
-    <trow>
+    <tr>
       <td>{{ answer.number }}</td>
       <td>
         <span>{{ answer.one }}</span>
@@ -74,14 +74,14 @@ table thead {
           and <span>{{ answer.two }}</span>
         {% endif %}
       </td>
-    </trow>
+    </tr>
     {% empty %}
-    <trow>
+    <tr>
       <td>0</td>
       <td>
         <span>No answers</span>
       </td>
-    </trow>
+    </tr>
     {% endfor %}
   </table>
 
