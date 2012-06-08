@@ -17,15 +17,25 @@ def top_k_for_question(question, k=6):
   groups = []
   if not len(answers):
     return { 'question': question.qtext }
-  for resident, group in itertools.groupby(answers, lambda a: a.resident):
+  for resident, group in itertools.groupby(answers, grouping):
     if question.istwoans:
       g = list(group)
-      groups.append( (len(g), resident.name, g[0].resident2.name ) )
+      groups.append( (len(g), resident[0], resident[1] ) )
     else:
-      groups.append( (iterlen(group), resident.name, None) )
+      groups.append( (iterlen(group), resident, None) )
   groups.sort(reverse=True)
   answers = map( lambda g: { 'one': g[1], 'two': g[2], 'number': g[0] }, groups[:k] )
   return { 'question': question.qtext, 'answers': answers }
+
+def grouping(answer):
+  if answer.resident2:
+    r1 = answer.resident.name
+    r2 = answer.resident2.name
+    if r1 < r2:
+      return (r1, r2)
+    else:
+      return (r2, r1)
+  return answer.resident.name
 
 def iterlen(it):
   return sum(1 for _ in it)
