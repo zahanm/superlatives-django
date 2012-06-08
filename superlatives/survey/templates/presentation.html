@@ -30,8 +30,16 @@ ul {
 .answer {
   opacity: 0;
   font-size: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.answer td {
+  padding: 6px;
+}
+
+table thead {
+  font-weight: bold;
 }
 
 .actions {
@@ -52,20 +60,30 @@ ul {
 
   <h2>{{ result.question }}</h2>
 
-  <ul>
-  {% for answer in result.answers %}
-    <li class="answer">
-      <span>{{ answer.number }}</span>
-      &mdash;
-      <span>{{ answer.one }}</span>
-    {% if answer.two %}
-      and <span>{{ answer.two }}</span>
-    {% endif %}
-    </li>
-  {% empty %}
-    <li class="answer">No answers</li>
-  {% endfor %}
-  </ul>
+  <table class="answer">
+    <thead>
+      <td>Votes</td>
+      <td>Selection</td>
+    </thead>
+    {% for answer in result.answers %}
+    <trow>
+      <td>{{ answer.number }}</td>
+      <td>
+        <span>{{ answer.one }}</span>
+        {% if answer.two %}
+          and <span>{{ answer.two }}</span>
+        {% endif %}
+      </td>
+    </trow>
+    {% empty %}
+    <trow>
+      <td>0</td>
+      <td>
+        <span>No answers</span>
+      </td>
+    </trow>
+    {% endfor %}
+  </table>
 
   <div class="actions">
     <button class="btn btn-large prev" >Previous</button>
