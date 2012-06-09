@@ -6,10 +6,9 @@ from django.contrib.auth.decorators import login_required
 
 from survey.models import Resident, Question, Answer
 from survey.utils import json_response
+from survey import feud
 
 from django.conf import settings
-
-import feud
 
 class RestoredQuestion:
   def __init__(self, id, qtext, istwoans, prevans='', prevans2=''):
