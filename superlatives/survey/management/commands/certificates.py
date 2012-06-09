@@ -17,7 +17,7 @@ class Command(BaseCommand):
     for q in Question.objects.filter(istwoans=False):
       result = feud.top_k_for_question(q, 1)
       if len(result['answers']):
-        award_map[ result['answers'][0]['one'] ].append( q.qtext )
+        award_map[ result['answers'][0]['one'] ].append( str(result['answers'][0]['number']) + ' - ' + q.qtext )
     pp = PrettyPrinter(indent=2)
     pp.pprint(award_map)
 
