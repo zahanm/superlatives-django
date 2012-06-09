@@ -8,7 +8,7 @@ def export_top_k(k=6):
   answer_list = []
   for q in Question.objects.all():
     result = top_k_for_question(q, k)
-    if len(result.answers) > 0:
+    if len(result['answers']) > 0:
       answer_list.append( result )
   return answer_list
 
@@ -16,11 +16,10 @@ def top_k_for_question(question, k=6):
   answers = question.answer_set.order_by('resident', 'resident2')
   groups = []
   if not len(answers):
-    return { 'question': question.qtext }
+    return { 'question': question.qtext, 'answers': [] }
   for resident, group in itertools.groupby(answers, grouping):
     if question.istwoans:
-      g = list(group)
-      groups.append( (len(g), resident[0], resident[1] ) )
+      groups.append( (iterlen(group), resident[0], resident[1] ) )
     else:
       groups.append( (iterlen(group), resident, None) )
   groups.sort(reverse=True)
