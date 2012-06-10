@@ -64,8 +64,6 @@ def survey(request):
 
 @login_required
 def results(request):
-  if request.user.username not in settings.STAFF_SUNETIDS:
-    return redirect('/')
   return render_to_response('results.html', { 'results': feud.export_top_k() },
     context_instance=RequestContext(request))
 
