@@ -8,7 +8,7 @@
     "url": "git://github.com/zahanm/superlatives-django.git"
   },
   "dependencies": {
-    "mysql": "~2.0.0-alpha2"
+    "mysql": "~2.0.0-alpha3"
   },
   "devDependencies": {},
   "optionalDependencies": {},
